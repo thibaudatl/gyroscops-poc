@@ -1,0 +1,40 @@
+{
+    "name": "php-etl/pipeline-contracts",
+    "description": "This library describes contracts for the Extract-Transform-Load pattern.",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Kiboko SAS",
+            "homepage": "http://kiboko.fr"
+        },
+        {
+            "name": "Grégory Planchat",
+            "email": "gregory@kiboko.fr"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "php-etl/bucket-contracts": "0.2.*",
+        "php-etl/satellite-contracts": "0.1.*"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.10",
+        "friendsofphp/php-cs-fixer": "^3.0",
+        "rector/rector": "^0.15"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kiboko\\Contract\\Pipeline\\": "src/"
+        }
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "0.4.x-dev"
+        }
+    }
+}

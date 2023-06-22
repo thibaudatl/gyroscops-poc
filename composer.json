@@ -1,0 +1,30 @@
+{
+    "name": "leo/proj",
+    "autoload": {
+        "psr-4": {
+            "Leo\\Proj\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Leo Thibaudat",
+            "email": "leo.thibaudat@akeneo.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php-etl/satellite": "^0.6.0@dev",
+        "php-etl/csv-plugin": "*",
+        "php-etl/json-plugin": "*",
+        "php-etl/akeneo-expression-language": "^0.3.0@dev",
+        "php-etl/akeneo-plugin": "^0.6.0@dev",
+        "php-etl/fast-map-plugin": "^0.8.0@dev",
+        "php-etl/fast-map": "^0.5.0@dev",
+        "php-etl/sql-plugin": "^0.4.0@dev"
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    }
+}

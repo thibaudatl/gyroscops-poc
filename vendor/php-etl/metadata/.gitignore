@@ -1,0 +1,7 @@
+vendor/
+reports/
+.idea/
+!.idea/runConfigurations/*
+.env
+bin/
+.php-cs-fixer.cache

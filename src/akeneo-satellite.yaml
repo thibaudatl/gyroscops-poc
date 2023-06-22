@@ -1,0 +1,52 @@
+version: '0.3'
+satellites:
+    csv_to_json:
+        label: 'Akeneo integration'
+        filesystem:
+            path: build
+        pipeline:
+            expression_language:
+                - 'Kiboko\Component\Satellite\ExpressionLanguage\Provider'
+            steps:
+                - akeneo:
+                    extractor:
+                        type: product
+                        method: all
+                        search:
+#                            - { field: enabled, operator: '=', value: true }
+#                            - { field: completeness, operator: '>', value: 70, scope: ecommerce }
+                            - { field: family, operator: IN, value: [ camcorders ] }
+                    logger:
+                        type: 'stderr'
+                    client:
+                        api_url: '@=env("AKENEO_URL")'
+                        client_id: '@=env("AKENEO_CLIENT_ID")'
+                        secret: '@=env("AKENEO_CLIENT_SECRET")'
+                        username: '@=env("AKENEO_USERNAME")'
+                        password: '@=env("AKENEO_PASSWORD")'
+                - fastmap:
+                    expression_language:
+                        - 'Kiboko\Component\ExpressionLanguage\Akeneo\AkeneoFilterProvider'
+                    map:
+                        -   field: '[sku]'
+                            copy: '[identifier]'
+                        -   field: '[family]'
+                            copy: '[family]'
+                        -   field: '[values]'
+                            expression: 'Array'
+                            map:
+                                -   field: '[description]'
+                                    expression: 'filter(input["values"]["description"])'
+                                -   field: '[ProductName]'
+                                    expression: 'attribute(input["values"]["ProductName"], first())'
+                                -   field: '[brand]'
+                                    expression: 'attribute(input["values"]["brand"], first())'
+                - json:
+                    loader:
+                        file_path: 'output.json'
+
+#                -   csv:
+#                        loader:
+#                            file_path: '../../products_akeneo.csv'
+#                            delimiter: ";"
+#                            enclosure: '"'

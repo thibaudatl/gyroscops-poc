@@ -1,0 +1,36 @@
+{
+    "name": "php-etl/metadata-contracts",
+    "description": "Interfaces for the Metadata package whose role is to describe data structures.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kiboko SAS",
+            "homepage": "https://kiboko.fr"
+        },
+        {
+            "name": "Grégory Planchat",
+            "email": "gregory@kiboko.fr"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^8.2"
+    },
+    "require-dev": {
+        "rector/rector": "^0.15"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kiboko\\Contract\\Metadata\\": "src/"
+        }
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "0.2.x-dev"
+        }
+    }
+}

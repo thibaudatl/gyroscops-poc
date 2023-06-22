@@ -1,0 +1,16 @@
+version: '0.3'
+satellites:
+    csv_to_json:
+        label: 'CSV to JSON'
+        filesystem:
+            path: build
+        pipeline:
+            steps:
+                - csv:
+                      extractor:
+                          file_path: '../../products.csv'
+                          delimiter: ";"
+                          enclosure: '"'
+                - json:
+                      loader:
+                          file_path: 'output.json'
