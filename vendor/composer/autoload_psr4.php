@@ -60,6 +60,7 @@ return array(
     'Kiboko\\Contract\\Configurator\\' => array($vendorDir . '/php-etl/configurator-contracts/src'),
     'Kiboko\\Contract\\Bucket\\' => array($vendorDir . '/php-etl/bucket-contracts/src'),
     'Kiboko\\Contract\\Action\\' => array($vendorDir . '/php-etl/action-contracts/src'),
+    'Kiboko\\Component\\Workflow\\' => array($vendorDir . '/php-etl/workflow/src'),
     'Kiboko\\Component\\State\\' => array($vendorDir . '/php-etl/console-state/src'),
     'Kiboko\\Component\\Satellite\\' => array($vendorDir . '/php-etl/satellite/src'),
     'Kiboko\\Component\\SatelliteToolbox\\' => array($vendorDir . '/php-etl/satellite-toolbox/src'),

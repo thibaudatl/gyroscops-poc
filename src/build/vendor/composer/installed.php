@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
-        'name' => 'satellite/874ee2e8fd788bba01344f15d687fec90ce1a3d8d637b62d7d669bac5462a77b',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => NULL,
+        'name' => 'satellite/d7396b2a74a197a08e7ad6e77eec8d79e0fc15decb903b958d222fd4d62693aa',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '37fc34c15d441ebe9f609cd209c3adadce471bfa',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -178,6 +178,17 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'php-etl/workflow' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '8e88d41a361caa9b2e963a032e614aecd3316158',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../php-etl/workflow',
+            'aliases' => array(
+                0 => '0.2.x-dev',
+            ),
+            'dev_requirement' => false,
+        ),
         'php-etl/workflow-console-runtime' => array(
             'pretty_version' => 'v0.4.1',
             'version' => '0.4.1.0',
@@ -186,6 +197,12 @@
             'install_path' => __DIR__ . '/../php-etl/workflow-console-runtime',
             'aliases' => array(),
             'dev_requirement' => false,
+        ),
+        'php-etl/workflow-implementation' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '0.2.0',
+            ),
         ),
         'php-http/async-client-implementation' => array(
             'dev_requirement' => false,
@@ -273,8 +290,8 @@
         'psr/http-client-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '*',
-                1 => '1.0',
+                0 => '1.0',
+                1 => '*',
             ),
         ),
         'psr/http-factory' => array(
@@ -289,9 +306,9 @@
         'psr/http-factory-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '*',
-                1 => '1.0',
-                2 => '^1.1 || ^2.0',
+                0 => '1.0',
+                1 => '^1.1 || ^2.0',
+                2 => '*',
             ),
         ),
         'psr/http-message' => array(
@@ -306,9 +323,9 @@
         'psr/http-message-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '*',
-                1 => '1.0',
-                2 => '^1.1 || ^2.0',
+                0 => '1.0',
+                1 => '^1.1 || ^2.0',
+                2 => '*',
             ),
         ),
         'psr/log' => array(
@@ -336,10 +353,10 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
-        'satellite/874ee2e8fd788bba01344f15d687fec90ce1a3d8d637b62d7d669bac5462a77b' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => NULL,
+        'satellite/d7396b2a74a197a08e7ad6e77eec8d79e0fc15decb903b958d222fd4d62693aa' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '37fc34c15d441ebe9f609cd209c3adadce471bfa',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

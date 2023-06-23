@@ -4,18 +4,18 @@ satellites:
         label: 'Akeneo integration'
         filesystem:
             path: build
+#        workflow:
+#            jobs:
+#                -   name: 'Pulling attributes, options and attribute groups'
         pipeline:
             expression_language:
                 - 'Kiboko\Component\Satellite\ExpressionLanguage\Provider'
+                - 'Kiboko\Component\ExpressionLanguage\Akeneo\AkeneoFilterProvider'
             steps:
                 - akeneo:
                     extractor:
-                        type: product
+                        type: attribute
                         method: all
-                        search:
-#                            - { field: enabled, operator: '=', value: true }
-#                            - { field: completeness, operator: '>', value: 70, scope: ecommerce }
-                            - { field: family, operator: IN, value: [ camcorders ] }
                     logger:
                         type: 'stderr'
                     client:
@@ -24,50 +24,40 @@ satellites:
                         secret: '@=env("AKENEO_CLIENT_SECRET")'
                         username: '@=env("AKENEO_USERNAME")'
                         password: '@=env("AKENEO_PASSWORD")'
+                    lookup:
+                        conditional:
+                            -   condition: '@=(input["type"] in ["pim_catalog_simpleselect", "pim_catalog_multipleselect", "akeneo_reference_entity", "akeneo_reference_entity_collection"])'
+                                type: attributeOption
+                                code: '@=input["code"]'
+                                method: listPerPage
+#                                search:
+#                                    - { field: code, operator: IN, value: ['@=input["code"]'] }
+                                merge:
+                                    map:
+                                        -   field: '[options]'
+                                            expression: 'join("|", lookup["code"])'
 
-                -   batch:
+                -   fastmap:
                         expression_language:
                             - 'Kiboko\Component\ExpressionLanguage\Akeneo\AkeneoFilterProvider'
-                        merge:
-                            foreach: '@=["Nom_produit", "coloris", "code_tfp"]'
-                            do: '@={ code: input["identifier"], LCID: "fr_FR", attributeName: item, attributeValue: attribute(input["values"][item], locale("fr_FR", null)) }'
+                        map:
+                            -   field: '[code]'
+                                copy: '[code]'
+#                            -   field: '[label-en_US]'
+#                                copy: '[labels][en_US]'
+#                            -   field: '[type]'
+#                                copy: '[type]'
+#                            -   field: '[localizable]'
+#                                copy: '[localizable]'
+#                            -   field: '[scopable]'
+#                                copy: '[scopable]'
+#                            -   field: '[group]'
+#                                copy: '[group]'
+#                            -   field: '[reference_data_name]'
+#                                copy: '[reference_data_name]'
+#                            -   field: '[sort_order]'
+#                                copy: '[sort_order]'
 
-#                -   akeneo:
-#                        loader:
-#                            type: product
-#                            method: upsertList
-#                        logger:
-#                            type: 'stderr'
-#                        client:
-#                            api_url: '@=env("AKENEO_URL")'
-#                            client_id: '@=env("AKENEO_CLIENT_ID")'
-#                            secret: '@=env("AKENEO_CLIENT_SECRET")'
-#                            username: '@=env("AKENEO_USERNAME")'
-#                            password: '@=env("AKENEO_PASSWORD")'
-#
-                - fastmap:
-                    expression_language:
-                        - 'Kiboko\Component\ExpressionLanguage\Akeneo\AkeneoFilterProvider'
-                    map:
-                        -   field: '[sku]'
-                            copy: '[identifier]'
-                        -   field: '[family]'
-                            copy: '[family]'
-                        -   field: '[values]'
-                            expression: 'input'
-                            list:
-                                -   field: '[description]'
-                                    expression: 'filter(input["values"]["description"])'
-                                -   field: '[ProductName]'
-                                    expression: 'attribute(input["values"]["ProductName"], first())'
-                                -   field: '[brand]'
-                                    expression: 'attribute(input["values"]["brand"], first())'
-#                - json:
-#                    loader:
-#                        file_path: 'output.json'
-
-#                -   csv:
-#                        loader:
-#                            file_path: '../../products_akeneo.csv'
-#                            delimiter: ";"
-#                            enclosure: '"'
+                -   json:
+                        loader:
+                            file_path: 'output_attr_mapped.json'

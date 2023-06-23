@@ -297,6 +297,7 @@ return array(
     'Kiboko\\Component\\State\\StateOutput\\Pipeline' => $vendorDir . '/php-etl/console-state/src/StateOutput/Pipeline.php',
     'Kiboko\\Component\\State\\StateOutput\\PipelineStep' => $vendorDir . '/php-etl/console-state/src/StateOutput/PipelineStep.php',
     'Kiboko\\Component\\State\\StateOutput\\Workflow' => $vendorDir . '/php-etl/console-state/src/StateOutput/Workflow.php',
+    'Kiboko\\Component\\Workflow\\Workflow' => $vendorDir . '/php-etl/workflow/src/Workflow.php',
     'Kiboko\\Contract\\Action\\ActionInterface' => $vendorDir . '/php-etl/action-contracts/src/ActionInterface.php',
     'Kiboko\\Contract\\Action\\ActionState' => $vendorDir . '/php-etl/action-contracts/src/ActionState.php',
     'Kiboko\\Contract\\Action\\ExecutingActionInterface' => $vendorDir . '/php-etl/action-contracts/src/ExecutingActionInterface.php',

@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitc1c506cfd54b2902788d2f4cfc5f6081
+class ComposerStaticInite4eb12983419e0bfda5288714a813eae
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -58,6 +58,7 @@ class ComposerStaticInitc1c506cfd54b2902788d2f4cfc5f6081
             'Kiboko\\Contract\\Pipeline\\' => 25,
             'Kiboko\\Contract\\Bucket\\' => 23,
             'Kiboko\\Contract\\Action\\' => 23,
+            'Kiboko\\Component\\Workflow\\' => 26,
             'Kiboko\\Component\\State\\' => 23,
             'Kiboko\\Component\\Runtime\\Workflow\\' => 34,
             'Kiboko\\Component\\Runtime\\Pipeline\\' => 34,
@@ -132,8 +133,8 @@ class ComposerStaticInitc1c506cfd54b2902788d2f4cfc5f6081
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -166,6 +167,10 @@ class ComposerStaticInitc1c506cfd54b2902788d2f4cfc5f6081
         'Kiboko\\Contract\\Action\\' => 
         array (
             0 => __DIR__ . '/..' . '/php-etl/action-contracts/src',
+        ),
+        'Kiboko\\Component\\Workflow\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/php-etl/workflow/src',
         ),
         'Kiboko\\Component\\State\\' => 
         array (
@@ -537,6 +542,7 @@ class ComposerStaticInitc1c506cfd54b2902788d2f4cfc5f6081
         'Kiboko\\Component\\State\\StateOutput\\Pipeline' => __DIR__ . '/..' . '/php-etl/console-state/src/StateOutput/Pipeline.php',
         'Kiboko\\Component\\State\\StateOutput\\PipelineStep' => __DIR__ . '/..' . '/php-etl/console-state/src/StateOutput/PipelineStep.php',
         'Kiboko\\Component\\State\\StateOutput\\Workflow' => __DIR__ . '/..' . '/php-etl/console-state/src/StateOutput/Workflow.php',
+        'Kiboko\\Component\\Workflow\\Workflow' => __DIR__ . '/..' . '/php-etl/workflow/src/Workflow.php',
         'Kiboko\\Contract\\Action\\ActionInterface' => __DIR__ . '/..' . '/php-etl/action-contracts/src/ActionInterface.php',
         'Kiboko\\Contract\\Action\\ActionState' => __DIR__ . '/..' . '/php-etl/action-contracts/src/ActionState.php',
         'Kiboko\\Contract\\Action\\ExecutingActionInterface' => __DIR__ . '/..' . '/php-etl/action-contracts/src/ExecutingActionInterface.php',
@@ -1108,9 +1114,9 @@ class ComposerStaticInitc1c506cfd54b2902788d2f4cfc5f6081
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitc1c506cfd54b2902788d2f4cfc5f6081::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitc1c506cfd54b2902788d2f4cfc5f6081::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitc1c506cfd54b2902788d2f4cfc5f6081::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInite4eb12983419e0bfda5288714a813eae::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInite4eb12983419e0bfda5288714a813eae::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInite4eb12983419e0bfda5288714a813eae::$classMap;
 
         }, null, ClassLoader::class);
     }

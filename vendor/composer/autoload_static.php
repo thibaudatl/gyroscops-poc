@@ -98,6 +98,7 @@ class ComposerStaticInitff8f7dcacd74e665753cc7a79bfa3d01
             'Kiboko\\Contract\\Configurator\\' => 29,
             'Kiboko\\Contract\\Bucket\\' => 23,
             'Kiboko\\Contract\\Action\\' => 23,
+            'Kiboko\\Component\\Workflow\\' => 26,
             'Kiboko\\Component\\State\\' => 23,
             'Kiboko\\Component\\Satellite\\' => 27,
             'Kiboko\\Component\\SatelliteToolbox\\' => 34,
@@ -370,6 +371,10 @@ class ComposerStaticInitff8f7dcacd74e665753cc7a79bfa3d01
         'Kiboko\\Contract\\Action\\' => 
         array (
             0 => __DIR__ . '/..' . '/php-etl/action-contracts/src',
+        ),
+        'Kiboko\\Component\\Workflow\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/php-etl/workflow/src',
         ),
         'Kiboko\\Component\\State\\' => 
         array (

@@ -44,7 +44,6 @@ satellites:
                 - json:
                     loader:
                         file_path: 'output.json'
-
 #                -   csv:
 #                        loader:
 #                            file_path: '../../products_akeneo.csv'

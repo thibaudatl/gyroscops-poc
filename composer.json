@@ -15,12 +15,13 @@
     "require": {
         "php-etl/satellite": "^0.6.0@dev",
         "php-etl/csv-plugin": "*",
-        "php-etl/json-plugin": "*",
+        "php-etl/json-plugin": "^0.3.0@dev",
         "php-etl/akeneo-expression-language": "^0.3.0@dev",
         "php-etl/akeneo-plugin": "^0.6.0@dev",
         "php-etl/fast-map-plugin": "^0.8.0@dev",
         "php-etl/fast-map": "^0.5.0@dev",
-        "php-etl/sql-plugin": "^0.4.0@dev"
+        "php-etl/sql-plugin": "^0.4.0@dev",
+        "php-etl/workflow": "^0.2.0@dev"
     },
     "config": {
         "allow-plugins": {

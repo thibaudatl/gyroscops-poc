@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'leo/proj',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => NULL,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '37fc34c15d441ebe9f609cd209c3adadce471bfa',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -164,9 +164,9 @@
             'dev_requirement' => false,
         ),
         'leo/proj' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => NULL,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '37fc34c15d441ebe9f609cd209c3adadce471bfa',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -535,6 +535,17 @@
             ),
             'dev_requirement' => false,
         ),
+        'php-etl/workflow' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '8e88d41a361caa9b2e963a032e614aecd3316158',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../php-etl/workflow',
+            'aliases' => array(
+                0 => '0.2.x-dev',
+            ),
+            'dev_requirement' => false,
+        ),
         'php-etl/workflow-console-runtime' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
@@ -545,6 +556,12 @@
                 0 => '0.4.x-dev',
             ),
             'dev_requirement' => false,
+        ),
+        'php-etl/workflow-implementation' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '0.2.0',
+            ),
         ),
         'php-http/async-client-implementation' => array(
             'dev_requirement' => false,
