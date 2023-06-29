@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
-        'name' => 'satellite/d7396b2a74a197a08e7ad6e77eec8d79e0fc15decb903b958d222fd4d62693aa',
+        'name' => 'satellite/6fcecbceeb33145cb1d3960c3e7c81e9b0276e42f1c99a3294b20b810511b757',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '37fc34c15d441ebe9f609cd209c3adadce471bfa',
+        'reference' => '9a802458fd0490a63144314f0310a47f94ee0ed9',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -178,17 +178,6 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
-        'php-etl/workflow' => array(
-            'pretty_version' => 'dev-main',
-            'version' => 'dev-main',
-            'reference' => '8e88d41a361caa9b2e963a032e614aecd3316158',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../php-etl/workflow',
-            'aliases' => array(
-                0 => '0.2.x-dev',
-            ),
-            'dev_requirement' => false,
-        ),
         'php-etl/workflow-console-runtime' => array(
             'pretty_version' => 'v0.4.1',
             'version' => '0.4.1.0',
@@ -197,12 +186,6 @@
             'install_path' => __DIR__ . '/../php-etl/workflow-console-runtime',
             'aliases' => array(),
             'dev_requirement' => false,
-        ),
-        'php-etl/workflow-implementation' => array(
-            'dev_requirement' => false,
-            'provided' => array(
-                0 => '0.2.0',
-            ),
         ),
         'php-http/async-client-implementation' => array(
             'dev_requirement' => false,
@@ -290,8 +273,8 @@
         'psr/http-client-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0',
-                1 => '*',
+                0 => '*',
+                1 => '1.0',
             ),
         ),
         'psr/http-factory' => array(
@@ -306,9 +289,9 @@
         'psr/http-factory-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0',
-                1 => '^1.1 || ^2.0',
-                2 => '*',
+                0 => '*',
+                1 => '1.0',
+                2 => '^1.1 || ^2.0',
             ),
         ),
         'psr/http-message' => array(
@@ -323,9 +306,9 @@
         'psr/http-message-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0',
-                1 => '^1.1 || ^2.0',
-                2 => '*',
+                0 => '*',
+                1 => '1.0',
+                2 => '^1.1 || ^2.0',
             ),
         ),
         'psr/log' => array(
@@ -353,10 +336,10 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
-        'satellite/d7396b2a74a197a08e7ad6e77eec8d79e0fc15decb903b958d222fd4d62693aa' => array(
+        'satellite/6fcecbceeb33145cb1d3960c3e7c81e9b0276e42f1c99a3294b20b810511b757' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '37fc34c15d441ebe9f609cd209c3adadce471bfa',
+            'reference' => '9a802458fd0490a63144314f0310a47f94ee0ed9',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -372,9 +355,9 @@
             'dev_requirement' => false,
         ),
         'symfony/dependency-injection' => array(
-            'pretty_version' => 'v6.3.0',
-            'version' => '6.3.0.0',
-            'reference' => 'ebf5f9c5bb5c21d75ab74995ce5e26c3fbbda44d',
+            'pretty_version' => 'v6.3.1',
+            'version' => '6.3.1.0',
+            'reference' => '7abf242af21f196b65f20ab00ff251fdf3889b8d',
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/dependency-injection',
             'aliases' => array(),

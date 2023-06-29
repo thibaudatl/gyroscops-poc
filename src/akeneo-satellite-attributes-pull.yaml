@@ -30,8 +30,8 @@ satellites:
                                 type: attributeOption
                                 code: '@=input["code"]'
                                 method: listPerPage
-#                                search:
-#                                    - { field: code, operator: IN, value: ['@=input["code"]'] }
+                                search:
+                                    - { field: code, operator: IN, value: ['@=input["code"]'] }
                                 merge:
                                     map:
                                         -   field: '[options]'

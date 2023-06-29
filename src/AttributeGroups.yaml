@@ -1,0 +1,46 @@
+version: '0.3'
+satellites:
+    AttributeGroups:
+        label: 'Attribute Groups - Akeneo to Akeneo'
+        filesystem:
+            path: build
+#        workflow:
+#            jobs:
+#                -   name: 'Pulling attributes groups and uploading to Akeneo'
+        pipeline:
+            expression_language:
+                - 'Kiboko\Component\Satellite\ExpressionLanguage\Provider'
+                - 'Kiboko\Component\ExpressionLanguage\Akeneo\AkeneoFilterProvider'
+            steps:
+                - akeneo:
+                    extractor:
+                        type: attributeGroup
+                        method: all
+                    logger:
+                        type: 'stderr'
+                    client:
+                        api_url: '@=env("AKENEO_URL")'
+                        client_id: '@=env("AKENEO_CLIENT_ID")'
+                        secret: '@=env("AKENEO_CLIENT_SECRET")'
+                        username: '@=env("AKENEO_USERNAME")'
+                        password: '@=env("AKENEO_PASSWORD")'
+
+                -   fastmap:
+                        expression_language:
+                            - 'Kiboko\Component\ExpressionLanguage\Akeneo\AkeneoFilterProvider'
+                        map:
+                            -   field: '[code]'
+                                copy: '[code]'
+                            -   field: '[label]'
+                                copy: '[labels]'
+                            -   field: '[sort_order]'
+                                copy: '[sort_order]'
+#                            - akeneo:
+#                                  loader:
+#                                      type: attributeGroup
+#                                      method: upsert
+#                                  logger:
+#                                      type: 'stderr'
+                -   json:
+                        loader:
+                            file_path: 'output_attributeGroups.json'

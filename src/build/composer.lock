@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7f4eed0065b0581e84e02ffbfab31087",
+    "content-hash": "7cd1451b86ce03222c35038208385844",
     "packages": [
         {
             "name": "akeneo/api-php-client",
@@ -1241,71 +1241,6 @@
             "time": "2023-04-18T13:53:22+00:00"
         },
         {
-            "name": "php-etl/workflow",
-            "version": "dev-main",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-etl/workflow.git",
-                "reference": "8e88d41a361caa9b2e963a032e614aecd3316158"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-etl/workflow/zipball/8e88d41a361caa9b2e963a032e614aecd3316158",
-                "reference": "8e88d41a361caa9b2e963a032e614aecd3316158",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^8.2",
-                "php-etl/bucket-contracts": "0.2.*",
-                "php-etl/pipeline-contracts": "0.4.*",
-                "php-etl/satellite-contracts": "0.1.*"
-            },
-            "provide": {
-                "php-etl/workflow-implementation": "0.2.0"
-            },
-            "require-dev": {
-                "friends-of-phpspec/phpspec-code-coverage": "*",
-                "friendsofphp/php-cs-fixer": "^3.0",
-                "infection/infection": "^0.26.18",
-                "phpstan/phpstan": "^1.10",
-                "phpunit/php-invoker": "^4.0",
-                "phpunit/phpunit": "^10.0",
-                "rector/rector": "^0.15"
-            },
-            "default-branch": true,
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-main": "0.2.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Kiboko\\Component\\Workflow\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Kiboko SAS",
-                    "homepage": "http://kiboko.fr"
-                },
-                {
-                    "name": "Grégory Planchat",
-                    "email": "gregory@kiboko.fr"
-                }
-            ],
-            "description": "This library implements multiple ETL pipelines",
-            "support": {
-                "issues": "https://github.com/php-etl/workflow/issues",
-                "source": "https://github.com/php-etl/workflow/tree/main"
-            },
-            "time": "2023-04-19T22:01:06+00:00"
-        },
-        {
             "name": "php-etl/workflow-console-runtime",
             "version": "v0.4.1",
             "source": {
@@ -2076,16 +2011,16 @@
         },
         {
             "name": "symfony/dependency-injection",
-            "version": "v6.3.0",
+            "version": "v6.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "ebf5f9c5bb5c21d75ab74995ce5e26c3fbbda44d"
+                "reference": "7abf242af21f196b65f20ab00ff251fdf3889b8d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/ebf5f9c5bb5c21d75ab74995ce5e26c3fbbda44d",
-                "reference": "ebf5f9c5bb5c21d75ab74995ce5e26c3fbbda44d",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/7abf242af21f196b65f20ab00ff251fdf3889b8d",
+                "reference": "7abf242af21f196b65f20ab00ff251fdf3889b8d",
                 "shasum": ""
             },
             "require": {
@@ -2137,7 +2072,7 @@
             "description": "Allows you to standardize and centralize the way objects are constructed in your application",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/dependency-injection/tree/v6.3.0"
+                "source": "https://github.com/symfony/dependency-injection/tree/v6.3.1"
             },
             "funding": [
                 {
@@ -2153,7 +2088,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-05-30T17:12:32+00:00"
+            "time": "2023-06-24T11:51:27+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
